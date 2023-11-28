@@ -20,7 +20,6 @@ then package `enhance_long`  automatically replace llama2 network architeture, a
 
 
 ``` json
-# config.json
 {
   "_flash_attn_2_enabled": True,
   ......
@@ -36,6 +35,8 @@ Of course if you want to use flashattention2 the premise is that your environmen
 - [x] LogN Attention (inspired by [熵不变性看Attention的Scale操作](https://kexue.fm/archives/8823),[Overcoming a Theoretical Limitation of Self-Attention ](https://openreview.net/forum?id=qc9O2EtrMI-))
 - [ ] ......(More advanced technologies are being searched and developed)
 
+
+![](/pic/ppl1.png)
 
 ## Result
 We use [LongBench](https://github.com/THUDM/LongBench) to evaluate how enhace_long enhances LlaMa2 ablity of long context extrapolation.Due to the poor effect of the original Llama on Chinese, the comparative results are not very convincing. We only select dataset which language is English and average text length is longer than 4k in LongBench: 
