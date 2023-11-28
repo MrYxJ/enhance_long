@@ -1,4 +1,4 @@
-# enhance-long 
+# enhance-long: Enhance LlaMa2 Long Context
 
 ## Description
 
@@ -21,8 +21,7 @@ then package `enhance_long`  automatically replace llama2 network architeture, a
 
 ``` json
 {
-  "_flash_attn_2_enabled": True,
-  ......
+  "_flash_attn_2_enabled": True, 
 }
 ```
 Of course if you want to use flashattention2 the premise is that your environment needs support.
@@ -31,7 +30,7 @@ Of course if you want to use flashattention2 the premise is that your environmen
 ## Added Tech
 
 - [x] Dynamic NTK RoPE (alpha=2, inspired by [reddit talk](https://www.reddit.com/r/LocalLLaMA/comments/14mrgpr/dynamically_scaled_rope_further_increases))
-- [x] Consistent Dynamic NTK RoPE (created by [Consistent-DynamicNTKRoPE](https://github.com/NormXU/Consistent-DynamicNTKRoPE), implemetation fix by @MrYXJ)
+- [x] Consistent Dynamic NTK RoPE (created by [Consistent-DynamicNTKRoPE](https://github.com/NormXU/Consistent-DynamicNTKRoPE), implemetation fix by [@MrYXJ](https://github.com/MrYxJ/Consistent-DynamicNTKRoPE/tree/patch-1))
 - [x] LogN Attention (inspired by [熵不变性看Attention的Scale操作](https://kexue.fm/archives/8823),[Overcoming a Theoretical Limitation of Self-Attention ](https://openreview.net/forum?id=qc9O2EtrMI-))
 - [ ] ......(More advanced technologies are being searched and developed)
 
