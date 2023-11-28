@@ -1,0 +1,4 @@
+flash-attn
+torch
+tqdm
+transformers==4.35.2
