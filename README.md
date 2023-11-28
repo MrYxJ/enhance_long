@@ -31,9 +31,9 @@ Of course if you want to use flashattention2 the premise is that your environmen
 
 ## Added Tech
 
-- [x] Dynamic NTK RoPE (alpha=2, )
-- [x] Consistent Dynamic NTK RoPE ()
-- [x] LogN Attention ()
+- [x] Dynamic NTK RoPE (alpha=2, inspired by [reddit talk](https://www.reddit.com/r/LocalLLaMA/comments/14mrgpr/dynamically_scaled_rope_further_increases))
+- [x] Consistent Dynamic NTK RoPE (created by [Consistent-DynamicNTKRoPE](https://github.com/NormXU/Consistent-DynamicNTKRoPE), implemetation fix by @MrYXJ)
+- [x] LogN Attention (inspired by [熵不变性看Attention的Scale操作](https://kexue.fm/archives/8823),[Overcoming a Theoretical Limitation of Self-Attention ](https://openreview.net/forum?id=qc9O2EtrMI-))
 - [ ] ......(More advanced technologies are being searched and developed)
 
 
@@ -59,14 +59,14 @@ The llama2's origin max context length is 4k(4096), so we expand max context len
 
 | Model | HotpotQA | MusiQue |NarrativeQA |GovReport | QMSum | TriviaQA| SAMsum| TREC| PassageRetrieval-en|PassageCount|RepoBench-P |
 |--|--|--|--|--|--|--| --|--|--|--|--|
-| Llama2-7B-chat | 23.52 | 6.39| 15.86 | x | 19.38| 84.11| 41.44| 56| 8.17| 2.01| x|
+| Llama2-7B-chat | 23.52 | 6.39| 15.86 | 19.6 | 19.38| 84.11| 41.44| 56| 8.17| 2.01| 51.71|
 
 
 ### Extrapolation 8K
 | Model | HotpotQA | MusiQue |NarrativeQA |GovReport | QMSum | TriviaQA| SAMsum| TREC| PassageRetrieval-en|PassageCount|RepoBench-P |
 |--|--|--|--|--|--|--| --|--|--|--|--|
 | Llama2-7B-chat | 0.86 | 0| 0| 1.44 | 0.11| 9| 6.1| 11.5| 0| 0.07| 5.34|
-| Llama2-7B-chat-enhance | **28.64** | 7.02 | **19.85** | **20.98** | **20.79** | **84.45**| **42.7**| **63**| 7.9 | 2.91| **48.85**|
+| Llama2-7B-chat-enhance | **28.64** | 7.02 | **19.85** | **20.98** | **20.79** | **84.45**| **42.7**| **63**| 7.9 | 2.91| 48.85|
 
 
 ### Extrapolation 16K
@@ -80,7 +80,7 @@ The llama2's origin max context length is 4k(4096), so we expand max context len
 | Model | HotpotQA | MusiQue |NarrativeQA |GovReport | QMSum | TriviaQA| SAMsum| TREC| PassageRetrieval-en|PassageCount|RepoBench-P |
 |--|--|--|--|--|--|--| --|--|--|--|--|
 | Llama2-7B-chat | 0.86 | 0| 0| 1.44 | 0.11| 9| 6.1| 11.5| 0| 0.07| 3.71|
-| Llama2-7B-chat-enhance | 24.52 | **10.39** | x | x | 20.13 | 69.32 | 38.15| 59 | 5.14| 4.86| x|
+| Llama2-7B-chat-enhance | 24.52 | **10.39** | 6.87 |  | 20.13 | 69.32 | 38.15| 59 | 5.14| 4.86| |
 
 
 ### Conclusion
