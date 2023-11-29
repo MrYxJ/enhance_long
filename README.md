@@ -34,12 +34,12 @@ Of course if you want to use flashattention2 the premise is that your environmen
 - [x] LogN Attention (inspired by [熵不变性看Attention的Scale操作](https://kexue.fm/archives/8823),[Overcoming a Theoretical Limitation of Self-Attention ](https://openreview.net/forum?id=qc9O2EtrMI-))
 - [ ] ......(More advanced technologies are being searched and developed)
 
-As shown, we can easily compare the perplexity(PPL) in the long data:[gov_report](https://huggingface.co/datasets/urialon/gov_report_validation/tree/main/data)  as 32k input range using long context extrapolation technique in `enhace_long` and the original llama (without using long text extrapolation). After about 4k length, the PPL of the original llama starts to skyrocket.
+As shown, we can easily compare the perplexity(PPL) in the long data:[gov_report](https://huggingface.co/datasets/urialon/gov_report_validation/tree/main/data)  as 32k input range using long context extrapolation technique in `enhace_long` and the original llama (without using long text extrapolation). 
 ![](pic/100.png)
 
-Enlarge the picture，using or not using logn attention is about 8K and PPL starts to make a difference.
+Enlarge the picture, after about 4k length, the PPL of the original llama starts to skyrocket. and using or not using logn attention is about 6K PPL starts to make a difference.
 
-![](pic/10.png)
+![](pic/4-7.png)
 
 
 ## Result
