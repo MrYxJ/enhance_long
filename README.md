@@ -85,7 +85,7 @@ The llama2's origin max context length is 4k(4096), so we expand max context len
 | Model | HotpotQA | MusiQue |NarrativeQA |GovReport | QMSum | TriviaQA| SAMsum| TREC| PassageRetrieval-en|PassageCount|RepoBench-P |
 |--|--|--|--|--|--|--| --|--|--|--|--|
 | Llama2-7B-chat | 0.86 | 0| 0| 1.44 | 0.11| 9| 6.1| 11.5| 0| 0.07| 3.71|
-| Llama2-7B-chat-enhance | 24.52 | **10.39** | 6.87 |  | 20.13 | 69.32 | 38.15| 59 | 5.14| 4.86| |
+| Llama2-7B-chat-enhance | 24.52 | **10.39** | 6.87 | 20.36 | 20.13 | 69.32 | 38.15| 59 | 5.14| 4.86| 44.8|
 
 
 ### Conclusion
