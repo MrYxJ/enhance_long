@@ -11,20 +11,23 @@ pip install enhance-long
 
 
 ## How to Use
-This is very simple to use, you just need to
+This is very simple to use, you just need import this package after ```import transformers```:
 ```
+import transformers
 import enhance_long
 ```
 
-then package `enhance_long`  automatically replace llama2 network architeture, and recommended using [flashattention2](https://github.com/Dao-AILab/flash-attention) by setting the llama2 `config.json` file, which will significantly accelerate and save GPU memory in model predicting. 
+then package `enhance_long`  automatically replace llama2 network architeture, this is equivalent to you calling transformers to implement dynamic ntk rope with the settings llama2 config.json
 
-
-``` json
-{
-  "_flash_attn_2_enabled": True, 
-}
+```python
+config['rope_scaling'] = {'type': 'dynamic',  'factor': 2.0}
 ```
-Of course if you want to use flashattention2 the premise is that your environment needs support.
+
+In addition, highly recommended using [flashattention2](https://github.com/Dao-AILab/flash-attention) by setting the llama2 `config.json` file, which will significantly accelerate and save GPU memory in model predicting. 
+
+``` python
+config['_flash_attn_2_enabled']=True, 
+```
 
 
 ## Added Tech
